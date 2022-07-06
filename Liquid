@@ -1,0 +1,15 @@
+<p> <img src="https://estimated-delivery-days.setubridgeapps.com/estimated-delivery-days/app/admin/img/icon_img49.png" style="height:25px;float:left;margin-right:10px;padding-bottom: 4px;"/>
+Get it between <strong><span id="fromDate"></span> - <span id="toDate"></span></strong></p>
+{{ '//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js' | script_tag }}
+<script>
+var fromDate = Date.today().addDays(7);
+if (fromDate.is().saturday() || fromDate.is().sunday()) {
+fromDate = fromDate.next().monday();
+}
+var toDate = Date.today().addDays(12);
+if (toDate.is().saturday() || toDate.is().sunday()) {
+toDate = toDate.next().monday();
+}
+document.getElementById('fromDate').innerHTML = fromDate.toString('dddd MMMM dS');
+document.getElementById('toDate').innerHTML = toDate.toString('dddd MMMM dS');
+</script>
