@@ -1,0 +1,14 @@
+<style>
+video{
+display: block;
+margin: 0 auto;
+width: 100%;
+opacity: 100%;
+
+}
+</style>
+
+<video controls autoplay
+loop playsinline muted>
+<source src="https://cdn.shopify.com/videos/c/o/v/abbb8d3184044ac5af1d806214806fbf.mp4" />
+</video>
